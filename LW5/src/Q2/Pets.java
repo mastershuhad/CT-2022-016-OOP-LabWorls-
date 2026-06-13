@@ -35,8 +35,6 @@ public class Pets {
         }
         System.out.println("\n--- Pet List ---");
 
-        ArrayList<String> catNames = new ArrayList<>();
-        ArrayList<String> dogNames = new ArrayList<>();
 
         for(Pet p: pets){
 
@@ -44,14 +42,13 @@ public class Pets {
 
             if(p instanceof Cat){
                 type = "Cat";
-                catNames.add(p.getName());
             } else if (p instanceof Dog) {
                 type = "Dog";
-                dogNames.add(p.getName());
             }else{
                 type = "Unknown";
             }
 
+            System.out.printf("\nName of pet : %s Type : %s",p.getName(),type);
         }
 
         scan.close();
